@@ -1,0 +1,101 @@
+@import "../_variables.scss";
+
+.lander {
+	background-image: linear-gradient(to right, $blue-1, $blue-2);
+	background-size: cover;
+	background-blend-mode: multiply;
+	min-height: 100vh;
+	border-bottom-left-radius: 370px;
+	display: flex;
+	flex-direction: column;
+	box-shadow: 0 -1.5rem 3rem rgba($black-col, 0.6) inset,
+		0 1.5rem 2rem rgba($black-col, 0.8);
+}
+.nav {
+	padding: 1rem 0;
+	&__list {
+		list-style: none;
+		font-size: 1.5rem;
+		font-weight: 500;
+		display: flex;
+		justify-content: flex-start;
+		&--link {
+			text-decoration: none;
+			font-family: inherit;
+			color: inherit;
+		}
+	}
+	&__list-item {
+		letter-spacing: 3px;
+		margin-left: 2.5rem;
+		color: $white-col;
+		text-transform: uppercase;
+		padding: 2rem 1.5rem;
+		border: 3px solid transparent;
+		cursor: pointer;
+		transition: all 0.2s ease-in;
+		&--1 {
+			font-size: 2rem;
+			padding-bottom: 1rem;
+			border-bottom: 3px solid $white-col;
+		}
+		&:hover {
+			border: 3px solid $yel-1;
+			color: $yel-1;
+		}
+		&:active {
+			color: $blue-1;
+			background-color: $yel-1;
+			border: 2px solid $yel-1;
+		}
+	}
+}
+.lander__content {
+	align-self: center;
+	margin-top: 25vh;
+	display: grid;
+	justify-content: center;
+	justify-items: center;
+	grid-row-gap: 4rem;
+}
+.lander__title {
+	color: $white-col;
+	font-size: 10rem;
+	font-weight: 700;
+	letter-spacing: 5px;
+	text-shadow: 0 1rem 1.5rem rgba($black-col, 0.6);
+}
+.lander__plus {
+	background-color: $white-col;
+	border-radius: 50px;
+	color: $black-col;
+	padding: 1.5rem 2.5rem;
+	font-size: 1.8rem;
+	cursor: pointer;
+	box-shadow: 0 1rem 1.5rem rgba($black-col, 0.6);
+	border: none;
+	outline: none;
+	display: flex;
+	animation-fill-mode: both;
+	justify-content: center;
+	align-items: center;
+	transition: all 0.2s;
+	&--icon {
+		margin-left: 2rem;
+		font-size: 3rem;
+		color: $blue-2;
+	}
+	&:hover {
+		background-color: $yel-2;
+		color: $black-col;
+		transform: translateY(-0.4rem);
+	}
+	&:hover &--icon {
+		color: $black-col;
+		animation: shake 0.4s;
+	}
+	&:focus {
+		outline: none;
+		transform: translateY(-0.1rem);
+	}
+}

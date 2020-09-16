@@ -1,0 +1,38 @@
+@import "../variables";
+
+.about {
+	margin-top: 7rem;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	padding: 4rem;
+	position: relative;
+	&__left {
+		display: flex;
+		flex-direction: column;
+		.about__photo {
+			font-size: 25rem;
+			color: $light-grey;
+		}
+		.about__name {
+			font-size: 5rem;
+			letter-spacing: 3px;
+			color: $blue-2;
+		}
+	}
+	&__right {
+		max-width: 45rem;
+		font-size: 2.2rem;
+		color: $grey-col;
+	}
+	&__back {
+		position: absolute;
+		font-size: 15rem;
+		display: inline-block;
+		opacity: 0.1;
+		font-weight: 700;
+		top: 50%;
+		left: 70%;
+		transform: translate(-50%, -50%) rotate(-20deg);
+	}
+}

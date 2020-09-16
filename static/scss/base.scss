@@ -1,0 +1,19 @@
+@import "sections/lander";
+@import "variables";
+@import "animations";
+@import "sections/about";
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html {
+	font-size: 10px;
+	box-sizing: inherit;
+	font-family: "Lato", sans-serif;
+	scroll-behavior: smooth;
+	scrollbar-width: none;
+}
+::-webkit-scrollbar {
+	display: none;
+}

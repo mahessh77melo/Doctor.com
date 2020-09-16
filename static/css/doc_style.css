@@ -131,6 +131,74 @@
     left: 70%;
     transform: translate(-50%, -50%) rotate(-20deg); }
 
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 4rem 0;
+  background-color: rgba(204, 204, 204, 0.15);
+  margin: 7rem 0; }
+  .contact__heading {
+    font-size: 7rem;
+    text-transform: uppercase;
+    background-image: linear-gradient(150deg, #091edf 0%, #091edf 50%, #ffbf18 50%);
+    color: transparent;
+    background-clip: text;
+    letter-spacing: 3px;
+    margin-bottom: 5rem;
+    text-align: center; }
+  .contact__cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: stretch; }
+  .contact__card {
+    border-radius: 5px;
+    overflow: hidden;
+    display: flex;
+    position: relative;
+    box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.35);
+    flex-direction: column;
+    align-items: center; }
+    .contact__card-img {
+      height: 20rem;
+      opacity: 0.3;
+      width: 30rem;
+      object-fit: cover;
+      background-blend-mode: hard-light; }
+    .contact__card--1 {
+      background-image: linear-gradient(to right bottom, rgba(255, 191, 24, 0.5), rgba(255, 191, 24, 0.3)); }
+    .contact__card--2 {
+      background-image: linear-gradient(to right bottom, rgba(247, 178, 177, 0.5), rgba(247, 178, 177, 0.3)); }
+    .contact__card--3 {
+      background-image: linear-gradient(to right bottom, rgba(56, 207, 186, 0.5), rgba(56, 207, 186, 0.3)); }
+    .contact__card-logo {
+      height: 2rem;
+      width: auto;
+      transform: translateX(-2rem); }
+    .contact__card-info {
+      list-style: none;
+      background-color: #fff;
+      padding-top: 3rem;
+      min-height: 25rem;
+      text-align: center;
+      align-self: stretch; }
+      .contact__card-info__item {
+        border-bottom: 1px solid #ccc;
+        padding: 1.5rem 0;
+        font-size: 1.7rem;
+        color: #777; }
+    .contact__card-title {
+      font-size: 2.2rem;
+      position: absolute;
+      top: 45%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(-7deg);
+      text-transform: uppercase;
+      padding: 1rem 1.5rem;
+      color: #fff;
+      background-image: linear-gradient(to bottom, #f7b2b1, #38cfba); }
+
 * {
   margin: 0;
   padding: 0;

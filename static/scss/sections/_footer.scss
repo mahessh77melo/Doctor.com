@@ -1,0 +1,32 @@
+.footer {
+	padding: 7rem;
+	background-color: $dark-violet;
+	display: flex;
+	flex-direction: column;
+	&__items {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		list-style: none;
+		font-size: 1.7rem;
+		padding: 7rem 0;
+		border-bottom: 2px solid $melon;
+	}
+	&__item {
+		color: $melon;
+		cursor: pointer;
+		padding: 0.5rem 1rem;
+		transition: all 0.2s ease-out;
+		&:hover {
+			background-color: $melon;
+			color: $dark-violet;
+			transform: rotate(-7deg);
+		}
+	}
+	&__copy {
+		font-size: 1.8rem;
+		color: $white-col;
+		margin-top: 5rem;
+		text-align: center;
+	}
+}

@@ -209,6 +209,34 @@
       transition: transform 0.15s;
       background-image: linear-gradient(to bottom, #f7b2b1, #38cfba); }
 
+.footer {
+  padding: 7rem;
+  background-color: #10002b;
+  display: flex;
+  flex-direction: column; }
+  .footer__items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    list-style: none;
+    font-size: 1.7rem;
+    padding: 7rem 0;
+    border-bottom: 2px solid #f7b2b1; }
+  .footer__item {
+    color: #f7b2b1;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    transition: all 0.2s ease-out; }
+    .footer__item:hover {
+      background-color: #f7b2b1;
+      color: #10002b;
+      transform: rotate(-7deg); }
+  .footer__copy {
+    font-size: 1.8rem;
+    color: #fff;
+    margin-top: 5rem;
+    text-align: center; }
+
 * {
   margin: 0;
   padding: 0;

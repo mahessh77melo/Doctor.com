@@ -80,6 +80,11 @@
 	justify-content: center;
 	align-items: center;
 	transition: all 0.2s;
+	a {
+		text-decoration: none;
+		font-family: inherit;
+		color: inherit;
+	}
 	&--icon {
 		margin-left: 2rem;
 		font-size: 3rem;

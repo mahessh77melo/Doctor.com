@@ -71,6 +71,10 @@
   justify-content: center;
   align-items: center;
   transition: all 0.2s; }
+  .lander__plus a {
+    text-decoration: none;
+    font-family: inherit;
+    color: inherit; }
   .lander__plus--icon {
     margin-left: 2rem;
     font-size: 3rem;
@@ -192,7 +196,7 @@
       min-height: 25rem;
       text-align: center;
       align-self: stretch; }
-      .contact__card-info__item {
+      .contact__card-info-item {
         border-bottom: 1px solid #ccc;
         padding: 1.5rem 0;
         font-size: 1.7rem;

@@ -10,3 +10,8 @@ Landing page for Vishnu
 ## September 17 commit ->
 
 Footer is complete. Application form is yet to be completed. I am planning on doing it tommorrow. Would appreciate your help! :)
+
+## September 27 commit ->
+
+Set up the Node.js backend and basic routing. Also created a 404 page wtih basic styling.
+Served static files without express.js

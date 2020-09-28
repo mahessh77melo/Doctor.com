@@ -26,7 +26,7 @@ const server = http.createServer((req, res) => {
 			res.end(data);
 		});
 	} else if (req.url === "/") {
-		fs.readFile("../client/views/index.html", (err, data) => {
+		fs.readFile("../client/index.html", (err, data) => {
 			if (err) {
 				console.log(err);
 				res.end();
@@ -39,7 +39,7 @@ const server = http.createServer((req, res) => {
 		});
 		// feed index.html
 	} else {
-		fs.readFile("../client/views/404.html", (err, data) => {
+		fs.readFile("../client/404.html", (err, data) => {
 			if (err) {
 				console.log(err);
 			} else {

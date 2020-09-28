@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			href="https://fonts.googleapis.com/icon?family=Material+Icons"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&display=swap"
+			rel="stylesheet"
+		/>
+		<title>Not Found mate!</title>
+	</head>
+	<body>
+		<div class="container">
+			<h1 class="header">Can't find the page you were looking for!</h1>
+			<div class="sad_face">
+				4
+				<span class="material-icons sad_face">sentiment_very_dissatisfied</span
+				>4
+			</div>
+			<h3 class="problem">
+				Problems with applying??? Contact the support team directly -->
+				<span class="material-icons">phone_forwarded</span>
+				<div class="number">+0413-2233432</div>
+			</h3>
+		</div>
+		<style>
+			.container {
+				margin: 50px 200px;
+				color: #444;
+				margin-left: 20vw;
+				font-family: "Lato", sans-serif;
+				display: flex;
+				flex-direction: column;
+			}
+			.sad_face {
+				font-size: 70px;
+				display: flex;
+				justify-content: center;
+				letter-spacing: 10px;
+				align-items: space-around;
+				color: #777;
+				align-self: center;
+				text-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+			}
+			.header {
+				font-size: 45px;
+				margin-bottom: 20px;
+				align-self: flex-start;
+			}
+			.problem {
+				align-self: flex-end;
+				font-size: 30px;
+				position: relative;
+			}
+			.problem span {
+				color: blue;
+				cursor: pointer;
+				font-size: 40px;
+				text-shadow: 0 3px 5px rgba(0, 0, 0, 0.6);
+			}
+			.problem span:hover + .number {
+				opacity: 1;
+			}
+			.number {
+				position: absolute;
+				right: -30px;
+				padding: 25px 25px;
+				transition: all 0.3s ease-in;
+				box-sizing: border-box;
+				opacity: 0;
+				border: 2px solid #777;
+				border-radius: 3px;
+				border-bottom-left-radius: 45px;
+				font-size: 16px;
+				box-shadow: 0 5px 5px rgba(0, 0, 0, 0.6);
+			}
+		</style>
+	</body>
+</html>

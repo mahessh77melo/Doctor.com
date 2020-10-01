@@ -13,10 +13,21 @@ console.log("Rendering the page at http://localhost:3000");
 app.use(express.static(path.join(baseDir, "/client/static")));
 // comments on get and post requests
 app.use(morgan("dev"));
+// form submission middleware
+app.use(express.urlencoded({ extended: true }));
 
 // main page rendering
 app.get("/", (req, res) => {
 	res.sendFile("client/index.html", { root: path.resolve(__dirname, "..") });
+});
+
+//getting the form input
+app.post("/submit", (req, res) => {
+	console.log(req.body);
+	const [year, month, date] = req.body.date.split("-");
+	const appTime = new Date(year, month - 1, date);
+	console.log(appTime.toDateString());
+	res.redirect("/");
 });
 
 // 404 page rendering

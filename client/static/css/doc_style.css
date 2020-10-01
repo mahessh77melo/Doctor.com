@@ -74,6 +74,7 @@
   .lander__plus a {
     text-decoration: none;
     font-family: inherit;
+    font-family: "Lato", sans-serif;
     color: inherit; }
   .lander__plus--icon {
     margin-left: 2rem;
@@ -148,6 +149,7 @@
     background-image: linear-gradient(150deg, #091edf 0%, #091edf 50%, #ffbf18 50%);
     color: transparent;
     background-clip: text;
+    -webkit-background-clip: text;
     letter-spacing: 3px;
     margin-bottom: 5rem;
     text-align: center; }

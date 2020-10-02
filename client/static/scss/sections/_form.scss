@@ -25,9 +25,10 @@
 		border: 3px solid $dark-violet;
 		color: $dark-violet;
 		font-size: 1.8rem;
+		grid-column: 2/3;
+		justify-self: center;
 		font-family: inherit;
 		margin-top: 4rem;
-		justify-self: end;
 		font-family: "Lato", sans-serif;
 		background-color: transparent;
 		padding: 1rem 2rem;

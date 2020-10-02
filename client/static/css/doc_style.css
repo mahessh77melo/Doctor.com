@@ -265,9 +265,10 @@
     border: 3px solid #10002b;
     color: #10002b;
     font-size: 1.8rem;
+    grid-column: 2/3;
+    justify-self: center;
     font-family: inherit;
     margin-top: 4rem;
-    justify-self: end;
     font-family: "Lato", sans-serif;
     background-color: transparent;
     padding: 1rem 2rem;
@@ -277,8 +278,6 @@
       background-color: #10002b;
       color: #f7b2b1;
       font-weight: 600; }
-  .form label[for="date"] {
-    align-self: center; }
   .form__label {
     font-size: 1.9rem;
     color: #10002b; }
@@ -297,6 +296,8 @@
   .form__date {
     padding: 3rem;
     justify-self: flex-start; }
+  .form label[for="date"] {
+    align-self: center; }
   .form input[type="number"] {
     -moz-appearance: textfield;
     appearance: textfield;

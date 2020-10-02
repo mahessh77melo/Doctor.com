@@ -117,15 +117,52 @@
 			</div>
 		</section>
 		<!-- form section not yet developed -->
-		<section class="section__form" id="doc__form" style="min-height: 60vh">
-			<h1 style="margin-top: 5rem; font-size: 7rem; text-align: center">
-				Appointment form
-			</h1>
+		<section class="section__form" id="doc__form">
+			<h1 class="section__form-header">Appointment form</h1>
 			<form class="form" action="/submit" method="POST">
+				<label for="name-pat" class="form__label">
+					Name of the Patient :
+				</label>
+				<input
+					class="form__input"
+					type="text"
+					name="namePatient"
+					id="name-pat"
+				/>
+				<label for="age" class="form__label">Age of the Patient : </label>
+				<input class="form__input" type="number" name="age" id="age" />
+				<label for="name-app" class="form__label">
+					Name of the Applicant :
+				</label>
+				<input
+					class="form__input"
+					type="text"
+					name="nameApplicant"
+					id="name-app"
+				/>
+				<label class="form__label" for="desc"
+					>Short description of your medical condition :
+				</label>
+				<textarea
+					class="form__description"
+					name="description"
+					id="desc"
+					cols="40"
+					rows="10"
+					placeholder="Brief the problem your facing right now....."
+				></textarea>
+				<!-- <input
+					type="text"
+					id="desc"
+					name="description"
+					class="form__description"
+				/> -->
+				<label for="date" class="form__label">
+					Fix the appointment Date :
+				</label>
 				<input type="date" name="date" id="date" class="form__date" />
-				<input type="submit" value="Submit" />
+				<button type="submit" class="form__btn">Apply</button>
 			</form>
-			styling aprama panren
 		</section>
 		<!--  -->
 		<section class="footer">

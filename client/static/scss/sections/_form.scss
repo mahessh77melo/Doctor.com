@@ -1,0 +1,80 @@
+@import "../variables";
+
+.section__form {
+	min-height: 70vh;
+	margin-bottom: 12rem;
+
+	&-header {
+		font-size: 4.5rem;
+		text-align: center;
+		color: $dark-violet;
+		text-shadow: 0 0.3rem 0.2rem rgba($black-col, 0.51);
+		margin-bottom: 6rem;
+	}
+}
+.form {
+	width: 60%;
+	margin: 2rem 10rem;
+	display: grid;
+	column-gap: 3rem;
+	row-gap: 2rem;
+	grid-template-columns: max-content max-content;
+
+	&__btn {
+		outline: none;
+		border: 3px solid $dark-violet;
+		color: $dark-violet;
+		font-size: 1.8rem;
+		font-family: inherit;
+		margin-top: 4rem;
+		justify-self: end;
+		font-family: "Lato", sans-serif;
+		background-color: transparent;
+		padding: 1rem 2rem;
+		cursor: pointer;
+		transition: all 0.2s ease-out;
+		&:hover {
+			background-color: $dark-violet;
+			color: $melon;
+			font-weight: 600;
+		}
+	}
+	&__label {
+		font-size: 1.9rem;
+		color: $dark-violet;
+	}
+	&__input,
+	&__description,
+	&__date {
+		border: 2px solid $melon;
+		outline: none;
+		color: $grey-col;
+		border-radius: 3px;
+		padding: 1.5rem 2.5rem;
+		transition: all 0.25s ease-in;
+		letter-spacing: 1px;
+		&:focus {
+			box-shadow: 0 0.3rem 0.7rem rgba($sea-blue, 0.5),
+				0 -0.3rem 0.7rem rgba($sea-blue, 0.5);
+		}
+		font-family: "Lato", sans-serif;
+		font-size: 1.6rem;
+	}
+	&__date {
+		padding: 3rem;
+		justify-self: flex-start;
+	}
+	label[for="date"] {
+		align-self: center;
+	}
+	input[type="number"] {
+		-moz-appearance: textfield;
+		appearance: textfield;
+		margin: 0;
+	}
+	input[type="number"]::-webkit-inner-spin-button,
+	input[type="number"]::-webkit-outer-spin-button {
+		-webkit-appearance: none;
+		margin: 0;
+	}
+}

@@ -243,6 +243,69 @@
     margin-top: 5rem;
     text-align: center; }
 
+.section__form {
+  min-height: 70vh;
+  margin-bottom: 12rem; }
+  .section__form-header {
+    font-size: 4.5rem;
+    text-align: center;
+    color: #10002b;
+    text-shadow: 0 0.3rem 0.2rem rgba(0, 0, 0, 0.51);
+    margin-bottom: 6rem; }
+
+.form {
+  width: 60%;
+  margin: 2rem 10rem;
+  display: grid;
+  column-gap: 3rem;
+  row-gap: 2rem;
+  grid-template-columns: max-content max-content; }
+  .form__btn {
+    outline: none;
+    border: 3px solid #10002b;
+    color: #10002b;
+    font-size: 1.8rem;
+    font-family: inherit;
+    margin-top: 4rem;
+    justify-self: end;
+    font-family: "Lato", sans-serif;
+    background-color: transparent;
+    padding: 1rem 2rem;
+    cursor: pointer;
+    transition: all 0.2s ease-out; }
+    .form__btn:hover {
+      background-color: #10002b;
+      color: #f7b2b1;
+      font-weight: 600; }
+  .form label[for="date"] {
+    align-self: center; }
+  .form__label {
+    font-size: 1.9rem;
+    color: #10002b; }
+  .form__input, .form__description, .form__date {
+    border: 2px solid #f7b2b1;
+    outline: none;
+    color: #777;
+    border-radius: 3px;
+    padding: 1.5rem 2.5rem;
+    transition: all 0.25s ease-in;
+    letter-spacing: 1px;
+    font-family: "Lato", sans-serif;
+    font-size: 1.6rem; }
+    .form__input:focus, .form__description:focus, .form__date:focus {
+      box-shadow: 0 0.3rem 0.7rem rgba(56, 207, 186, 0.5), 0 -0.3rem 0.7rem rgba(56, 207, 186, 0.5); }
+  .form__date {
+    padding: 3rem;
+    justify-self: flex-start; }
+  .form input[type="number"] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+    margin: 0; }
+  .form input[type="number"]::-webkit-inner-spin-button,
+  .form input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0; }
+
 * {
   margin: 0;
   padding: 0;

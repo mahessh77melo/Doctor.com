@@ -12,8 +12,8 @@
 	"devDependencies": {},
 	"scripts": {
 		"server": "start firefox http://localhost:3000",
-		"start": "nodemon exp_server.js",
-		"dev": "npm-run-all --parallel start server"
+		"dev": "nodemon exp_server.js",
+		"start": "npm-run-all server dev"
 	},
 	"author": "",
 	"license": "ISC"

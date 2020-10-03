@@ -18,4 +18,6 @@ Just run the test.js file. because u can't really access my mongo cloud. (too co
 
 ## quick way to run the server
 
-after running npm install, run `npm run dev` ,it will automatically open firefox at the localhost:3000 port
+after running npm install, run `npm run start` or just `npm start` ,it will automatically open firefox at the localhost:3000 port.
+if it causes problems, which it most likely won't, then run `npm run dev`.
+check it out and revert back

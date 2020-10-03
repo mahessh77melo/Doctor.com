@@ -272,12 +272,12 @@
     font-family: "Lato", sans-serif;
     background-color: transparent;
     padding: 1rem 2rem;
+    font-weight: 600;
     cursor: pointer;
     transition: all 0.2s ease-out; }
     .form__btn:hover {
       background-color: #10002b;
-      color: #f7b2b1;
-      font-weight: 600; }
+      color: #f7b2b1; }
   .form__label {
     font-size: 1.9rem;
     color: #10002b; }

@@ -32,12 +32,12 @@
 		font-family: "Lato", sans-serif;
 		background-color: transparent;
 		padding: 1rem 2rem;
+		font-weight: 600;
 		cursor: pointer;
 		transition: all 0.2s ease-out;
 		&:hover {
 			background-color: $dark-violet;
 			color: $melon;
-			font-weight: 600;
 		}
 	}
 	&__label {

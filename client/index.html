@@ -126,19 +126,21 @@
 				<input
 					class="form__input"
 					type="text"
-					name="namePatient"
+					name="patient"
 					id="name-pat"
+					required
 				/>
 				<label for="age" class="form__label">Age of the Patient : </label>
-				<input class="form__input" type="number" name="age" id="age" />
+				<input class="form__input" type="number" name="age" id="age" required />
 				<label for="name-app" class="form__label">
 					Name of the Applicant :
 				</label>
 				<input
 					class="form__input"
 					type="text"
-					name="nameApplicant"
+					name="applicant"
 					id="name-app"
+					required
 				/>
 				<label class="form__label" for="desc"
 					>Short description of your medical condition :
@@ -154,7 +156,7 @@
 				<label for="date" class="form__label">
 					Fix the appointment Date :
 				</label>
-				<input type="date" name="date" id="date" class="form__date" />
+				<input type="date" name="date" id="date" class="form__date" required />
 				<button type="submit" class="form__btn">Confirm the Appointment</button>
 			</form>
 		</section>

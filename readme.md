@@ -15,3 +15,7 @@ Just run the test.js file. because u can't really access my mongo cloud. (too co
 - go to server folder and run `node test.js`
 - this is to be done after u have given any new entries in the localhost server.
 - u can find ur latest entry there
+
+## quick way to run the server
+
+after running npm install, run `npm run dev` ,it will automatically open firefox at the localhost:3000 port

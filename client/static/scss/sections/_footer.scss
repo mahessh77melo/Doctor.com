@@ -17,10 +17,12 @@
 		cursor: pointer;
 		padding: 0.5rem 1rem;
 		transition: all 0.2s ease-out;
-		&:hover {
-			background-color: $melon;
-			color: $dark-violet;
-			transform: rotate(-7deg);
+		@media (hover: hover) {
+			&:hover {
+				background-color: $melon;
+				color: $dark-violet;
+				transform: rotate(-7deg);
+			}
 		}
 	}
 	&__copy {

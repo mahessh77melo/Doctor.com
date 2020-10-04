@@ -5,6 +5,10 @@
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
+	@media only screen and (max-width: $bp-medium) {
+		flex-direction: column;
+		flex-grow: 1;
+	}
 	padding: 4rem;
 	position: relative;
 	&__left {
@@ -13,11 +17,17 @@
 		.about__photo {
 			font-size: 25rem;
 			color: $light-grey;
+			@media only screen and (max-width: $bp-medium) {
+				font-size: 17rem;
+			}
 		}
 		.about__name {
 			font-size: 5rem;
 			letter-spacing: 3px;
 			color: $blue-2;
+		}
+		@media only screen and (max-width: $bp-medium) {
+			margin-bottom: 5rem;
 		}
 	}
 	&__right {
@@ -34,5 +44,13 @@
 		top: 50%;
 		left: 45%;
 		transform: translate(-50%, -50%) rotate(-20deg);
+		@media only screen and (max-width: $bp-small) {
+			font-size: 13rem;
+			opacity: 0.1;
+		}
+		@media only screen and (max-width: $bp-medium) and (min-width: $bp-small) {
+			left: 65%;
+			opacity: 0.1;
+		}
 	}
 }

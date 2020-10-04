@@ -9,14 +9,17 @@
 * {
 	margin: 0;
 	padding: 0;
-	box-sizing: border-box;
+	box-sizing: inherit;
 }
 html {
-	font-size: 10px;
-	box-sizing: inherit;
+	font-size: 62.5%;
+	box-sizing: border-box;
 	font-family: "Lato", sans-serif;
 	scroll-behavior: smooth;
 	scrollbar-width: none;
+	@media only screen and (max-width: $bp-large) {
+		font-size: 50%;
+	}
 }
 ::-webkit-scrollbar {
 	display: none;

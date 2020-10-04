@@ -13,6 +13,7 @@
 	"scripts": {
 		"server": "start firefox http://localhost:3000",
 		"dev": "nodemon exp_server.js",
+		"view": "node exp_server.js",
 		"start": "npm-run-all server dev"
 	},
 	"author": "",

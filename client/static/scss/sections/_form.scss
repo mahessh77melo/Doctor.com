@@ -19,7 +19,10 @@
 	column-gap: 3rem;
 	row-gap: 2rem;
 	grid-template-columns: max-content max-content;
-
+	@media only screen and (max-width: $bp-medium) {
+		display: flex;
+		flex-direction: column;
+	}
 	&__btn {
 		outline: none;
 		border: 3px solid $dark-violet;
@@ -38,6 +41,9 @@
 		&:hover {
 			background-color: $dark-violet;
 			color: $melon;
+		}
+		@media only screen and (max-width: $bp-large) {
+			align-self: flex-end;
 		}
 	}
 	&__label {
@@ -67,6 +73,9 @@
 	}
 	label[for="date"] {
 		align-self: center;
+		@media only screen and (max-width: $bp-medium) {
+			align-self: flex-start;
+		}
 	}
 	input[type="number"] {
 		-moz-appearance: textfield;

@@ -58,7 +58,7 @@
 		color: $grey-col;
 		border-radius: 3px;
 		padding: 1.5rem 2.5rem;
-		transition: all 0.25s ease-in;
+		transition: box-shadow 0.25s ease-in;
 		letter-spacing: 1px;
 		&:focus {
 			box-shadow: 0 0.3rem 0.7rem rgba($sea-blue, 0.5),

@@ -199,22 +199,33 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  margin: 7rem 0;
   padding: 4rem 0;
-  background-color: rgba(204, 204, 204, 0.15);
-  margin: 7rem 0; }
+  background-image: linear-gradient(105deg, rgba(9, 30, 223, 0.85) 0%, rgba(9, 30, 223, 0.85) 46%, rgba(255, 210, 31, 0.85) 46%); }
+  @media only screen and (max-width: 50em) {
+    .contact {
+      background-color: none;
+      background-image: url("../img/doctor-7.jpg"), linear-gradient(to right, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.6));
+      background-size: cover;
+      background-blend-mode: screen; } }
+  @media only screen and (min-width: 62.5em) {
+    .contact {
+      min-height: 100vh; } }
   .contact__heading {
     font-size: 10rem;
     text-transform: uppercase;
-    background-image: linear-gradient(150deg, #091edf 0%, #091edf 50%, #ffbf18 50%);
+    background-image: linear-gradient(105deg, #ffbf18 0%, #ffbf18 50.4%, #091edf 50.4%);
     color: transparent;
     background-clip: text;
     -webkit-background-clip: text;
+    text-shadow: 0 0.7rem 0.8rem rgba(0, 0, 0, 0.15);
     letter-spacing: 3px;
     margin-bottom: 5rem;
     text-align: center; }
     @media only screen and (max-width: 50em) {
       .contact__heading {
-        font-size: 7rem; } }
+        font-size: 7rem;
+        text-shadow: 0 1rem 1.3rem rgba(0, 0, 0, 0.25); } }
   .contact__cards {
     display: flex;
     flex-wrap: wrap;
@@ -362,7 +373,7 @@
     color: #777;
     border-radius: 3px;
     padding: 1.5rem 2.5rem;
-    transition: all 0.25s ease-in;
+    transition: box-shadow 0.25s ease-in;
     letter-spacing: 1px;
     font-family: "Lato", sans-serif;
     font-size: 1.6rem; }

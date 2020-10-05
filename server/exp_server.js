@@ -35,18 +35,25 @@ app.get("/", (req, res) => {
 });
 
 //getting the form input
-app.post("/submit", (req, res) => {
-	console.log(req.body);
-	const appointment = new Appointment(req.body);
+let body, onDate;
+app.post("/submit", (req, res, next) => {
+	body = req.body;
+	/* const appointment = new Appointment(req.body);
 	appointment
 		.save()
 		.then(() => {
 			res.redirect("/");
 		})
-		.catch((err) => console.log(err));
+		.catch((err) => console.log(err)); */
+	res.redirect("/");
 	const [year, month, date] = req.body.date.split("-");
 	const appTime = new Date(year, month - 1, date);
-	console.log(appTime.toDateString());
+	onDate = appTime.toDateString();
+	next();
+});
+app.get("/getdata", (req, res) => {
+	console.log(body);
+	`Application recieved for the following Patient : ${body.patient}. Applicant : ${body.applicant} on ${onDate}`;
 });
 
 // 404 page rendering

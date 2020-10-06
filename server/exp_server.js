@@ -53,7 +53,10 @@ app.post("/submit", (req, res, next) => {
 });
 app.get("/getdata", (req, res) => {
 	console.log(body);
-	`Application recieved for the following Patient : ${body.patient}. Applicant : ${body.applicant} on ${onDate}`;
+	console.log(req.params.getdata);
+	res.send(
+		`Application recieved for the following Patient : ${body.patient}. Applicant : ${body.applicant} on ${onDate}`
+	);
 });
 
 // 404 page rendering

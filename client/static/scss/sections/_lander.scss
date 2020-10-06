@@ -1,9 +1,6 @@
-@import "../_variables.scss";
-
 .lander {
 	background-image: linear-gradient(to right, $blue-1, $blue-2);
 	background-size: cover;
-	background-blend-mode: multiply;
 	min-height: 100vh;
 	border-bottom-left-radius: 370px;
 	display: flex;
@@ -21,7 +18,7 @@
 	}
 }
 .nav {
-	padding: 1rem 0;
+	padding: 2rem 0;
 	&__list {
 		list-style: none;
 		font-size: 1.5rem;
@@ -41,6 +38,7 @@
 		text-transform: uppercase;
 		padding: 2rem 1.5rem;
 		border: 3px solid transparent;
+		border-bottom-left-radius: 40px;
 		cursor: pointer;
 		transition: all 0.2s ease-in;
 

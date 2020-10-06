@@ -90,7 +90,6 @@
     text-transform: uppercase;
     padding: 2rem 1.5rem;
     border: 3px solid transparent;
-    border-bottom-left-radius: 40px;
     cursor: pointer;
     -webkit-transition: all 0.2s ease-in;
     transition: all 0.2s ease-in; }
@@ -506,6 +505,9 @@
   .form input[type="number"]::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0; }
+
+.btn-view {
+  margin-left: 100rem; }
 
 .footer {
   padding: 7rem;

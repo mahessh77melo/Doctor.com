@@ -3,6 +3,8 @@ const path = require("path");
 const morgan = require("morgan");
 const Appointment = require("./db_schema");
 const mongoose = require("mongoose");
+const http = require("http");
+const url = require("url");
 
 const app = express();
 const baseDir = path.dirname(__dirname);
@@ -53,7 +55,16 @@ app.post("/submit", (req, res, next) => {
 });
 app.get("/getdata", (req, res) => {
 	console.log(body);
-	res.json(body);
+	let queryObject = url.parse(req.url, true).query;
+	const query = JSON.parse(JSON.stringify(queryObject));
+	console.log(query.patient);
+	Appointment.findOne(query, (err, doc) => {
+		if (err) {
+			console.log(err);
+		} else {
+			res.json(doc);
+		}
+	});
 });
 
 // 404 page rendering

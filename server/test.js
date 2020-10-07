@@ -8,7 +8,7 @@ mongoose.connect(
 	{ useNewUrlParser: true, useUnifiedTopology: true }
 );
 
-Application.find((err, res) => {
+Application.findOne({ patient: "Paul Pierce" }, (err, res) => {
 	if (!err) {
 		console.log(res);
 	}

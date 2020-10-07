@@ -93,6 +93,14 @@
     cursor: pointer;
     -webkit-transition: all 0.2s ease-in;
     transition: all 0.2s ease-in; }
+    .nav__list-item-4 {
+      justify-self: flex-end;
+      cursor: pointer;
+      margin-left: auto;
+      margin-right: 2rem; }
+    @media only screen and (max-width: 37.5em) {
+      .nav__list-item-2, .nav__list-item-3 {
+        display: none; } }
     @media (hover: hover) {
       .nav__list-item:hover {
         border: 3px solid #ffbf18;

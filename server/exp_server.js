@@ -38,23 +38,22 @@ app.get("/", (req, res) => {
 
 //getting the form input
 let body, onDate;
-app.post("/submit", (req, res, next) => {
+app.post("/submit", (req, res) => {
 	body = req.body;
-	/* const appointment = new Appointment(req.body);
+	console.log(body);
+	const appointment = new Appointment(req.body);
 	appointment
 		.save()
 		.then(() => {
 			res.redirect("/");
 		})
-		.catch((err) => console.log(err)); */
-	res.redirect("/");
+		.catch((err) => console.log(err));
+	// res.redirect("/");
 	const [year, month, date] = req.body.date.split("-");
 	const appTime = new Date(year, month - 1, date);
 	onDate = appTime.toDateString();
-	next();
 });
 app.get("/getdata", (req, res) => {
-	console.log(body);
 	let queryObject = url.parse(req.url, true).query;
 	const query = JSON.parse(JSON.stringify(queryObject));
 	console.log(query.patient);
@@ -62,9 +61,13 @@ app.get("/getdata", (req, res) => {
 		if (err) {
 			console.log(err);
 		} else {
+			console.log(doc);
 			res.json(doc);
 		}
 	});
+});
+app.get("/application", (req, res) => {
+	res.redirect("/#application");
 });
 
 // 404 page rendering

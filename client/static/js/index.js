@@ -2,6 +2,7 @@ console.log("connected");
 const viewBtn = document.querySelector("#getdata");
 const form = document.querySelector("#doc__form");
 let application;
+<<<<<<< HEAD
 const appSection = document.querySelector("#appointment");
 
 const dateParser = (realDate) => {
@@ -17,6 +18,19 @@ const insertMarkup = () => {
 	document.querySelector(".app").innerHTML = `<div class="app__header">
 				<h1>Yet to be named Clinic</h1>
 			</div>`;
+=======
+let flag = 0;
+const appSection = document.querySelector("#appointment");
+
+const dateParser = (realDate) => {
+	const date = realDate.toLocaleString().split("T");
+	const [year, month, day] = date[0].split("-");
+	let appTime = new Date(year, month - 1, day);
+	appTime = appTime.toDateString();
+	return `${appTime} at ${date[1].slice(0, 5)}`;
+};
+const insertMarkup = () => {
+>>>>>>> 27507be69238e8f838c75eb5796093e1796f843e
 	let markup = `
 			<ul class="app__details">
 				<li class="app__item app__item-1">
@@ -52,7 +66,12 @@ viewBtn.addEventListener("click", () => {
 		.then((json) => {
 			application = json;
 			console.log(application);
+<<<<<<< HEAD
 			insertMarkup();
+=======
+			if (flag !== 1) insertMarkup();
+			flag = 1;
+>>>>>>> 27507be69238e8f838c75eb5796093e1796f843e
 			appSection.style.display = "block";
 			appSection.scrollIntoView();
 		})

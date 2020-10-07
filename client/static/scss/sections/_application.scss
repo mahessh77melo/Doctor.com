@@ -1,5 +1,9 @@
 .app {
+<<<<<<< HEAD
 	margin: 6rem 15rem;
+=======
+	margin: 10rem 15rem;
+>>>>>>> 27507be69238e8f838c75eb5796093e1796f843e
 	padding: 10rem 0;
 	font-family: "Lato", sans-serif;
 	background-color: $white-col;
@@ -32,6 +36,7 @@
 			margin-right: 6rem;
 		}
 		@media only screen and (max-width: $bp-medium) {
+<<<<<<< HEAD
 			margin-bottom: 2rem;
 			padding-bottom: 2rem;
 			flex-direction: row;
@@ -40,6 +45,13 @@
 		@media only screen and (max-width: $bp-small) {
 			flex-direction: column;
 		}
+=======
+			flex-direction: column;
+			margin-bottom: 2rem;
+			padding-bottom: 2rem;
+			border-bottom: 2px solid $sea-blue;
+		}
+>>>>>>> 27507be69238e8f838c75eb5796093e1796f843e
 	}
 }
 section.application {
@@ -47,5 +59,9 @@ section.application {
 	background-color: $light-melon;
 	width: 100vw;
 	padding: 5rem 0;
+<<<<<<< HEAD
 	min-height: 70vh;
+=======
+	min-height: 75vh;
+>>>>>>> 27507be69238e8f838c75eb5796093e1796f843e
 }

@@ -20,6 +20,7 @@
 		@media (hover: hover) {
 			&:hover {
 				background-color: $melon;
+				backface-visibility: hidden;
 				color: $dark-violet;
 				transform: rotate(-7deg);
 			}

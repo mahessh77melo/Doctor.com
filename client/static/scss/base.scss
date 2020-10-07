@@ -1,10 +1,11 @@
-@import "sections/lander";
 @import "variables";
 @import "animations";
+@import "sections/lander";
 @import "sections/about";
 @import "sections/contact";
-@import "sections/footer";
 @import "sections/form";
+@import "sections/footer";
+@import "sections/application";
 
 * {
 	margin: 0;

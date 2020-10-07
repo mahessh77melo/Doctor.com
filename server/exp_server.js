@@ -3,6 +3,8 @@ const path = require("path");
 const morgan = require("morgan");
 const Appointment = require("./db_schema");
 const mongoose = require("mongoose");
+const http = require("http");
+const url = require("url");
 
 const app = express();
 const baseDir = path.dirname(__dirname);
@@ -36,24 +38,36 @@ app.get("/", (req, res) => {
 
 //getting the form input
 let body, onDate;
-app.post("/submit", (req, res, next) => {
+app.post("/submit", (req, res) => {
 	body = req.body;
-	/* const appointment = new Appointment(req.body);
+	console.log(body);
+	const appointment = new Appointment(req.body);
 	appointment
 		.save()
 		.then(() => {
 			res.redirect("/");
 		})
-		.catch((err) => console.log(err)); */
-	res.redirect("/");
+		.catch((err) => console.log(err));
+	// res.redirect("/");
 	const [year, month, date] = req.body.date.split("-");
 	const appTime = new Date(year, month - 1, date);
 	onDate = appTime.toDateString();
-	next();
 });
 app.get("/getdata", (req, res) => {
-	console.log(body);
-	`Application recieved for the following Patient : ${body.patient}. Applicant : ${body.applicant} on ${onDate}`;
+	let queryObject = url.parse(req.url, true).query;
+	const query = JSON.parse(JSON.stringify(queryObject));
+	console.log(query.patient);
+	Appointment.findOne(query, (err, doc) => {
+		if (err) {
+			console.log(err);
+		} else {
+			console.log(doc);
+			res.json(doc);
+		}
+	});
+});
+app.get("/application", (req, res) => {
+	res.redirect("/#application");
 });
 
 // 404 page rendering

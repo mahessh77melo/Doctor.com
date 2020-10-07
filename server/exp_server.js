@@ -54,7 +54,6 @@ app.post("/submit", (req, res, next) => {
 	next();
 });
 app.get("/getdata", (req, res) => {
-	console.log(body);
 	let queryObject = url.parse(req.url, true).query;
 	const query = JSON.parse(JSON.stringify(queryObject));
 	console.log(query.patient);
@@ -62,9 +61,13 @@ app.get("/getdata", (req, res) => {
 		if (err) {
 			console.log(err);
 		} else {
+			console.log(doc);
 			res.json(doc);
 		}
 	});
+});
+app.get("/application", (req, res) => {
+	res.redirect("/#application");
 });
 
 // 404 page rendering

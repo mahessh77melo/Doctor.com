@@ -10,7 +10,8 @@ const dateParser = (realDate) => {
 	let appTime = new Date(year, month - 1, day);
 	appTime = appTime.toDateString();
 	return `${appTime} at ${date[1].slice(0, 5)}`; */
-	return new Date(realDate).split("GMT")[0];
+	const date = new Date(realDate);
+	return date.toString().split("GMT")[0];
 };
 const insertMarkup = () => {
 	let markup = `
@@ -41,8 +42,8 @@ const insertMarkup = () => {
 };
 viewBtn.addEventListener("click", () => {
 	let pname, aname;
-	pname = prompt("Enter the name of the patient : ");
-	aname = prompt("Enter the name of the Applicant");
+	pname = prompt("\nEnter the name of the patient : (Case sensitive)\n");
+	aname = prompt("\nEnter the name of the Applicant : (Case sensitive)\n");
 	fetch(`/getdata?patient=${pname}&applicant=${aname}`)
 		.then((response) => response.json())
 		.then((json) => {

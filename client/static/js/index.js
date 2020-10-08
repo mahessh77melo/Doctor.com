@@ -1,19 +1,24 @@
+// CHECK IF NOTHING IS WRONG
 console.log("connected");
+// DOM elements
 const viewBtn = document.querySelector("#getdata");
 const form = document.querySelector("#doc__form");
-let application;
 const appSection = document.querySelector("#appointment");
+// fetch request variable for the application
+let application;
 
+// utility function for date parsing
 const dateParser = (realDate) => {
-	/* const date = realDate.toLocaleString().split("T");
-	const [year, month, day] = date[0].split("-");
-	let appTime = new Date(year, month - 1, day);
-	appTime = appTime.toDateString();
-	return `${appTime} at ${date[1].slice(0, 5)}`; */
 	const date = new Date(realDate);
 	return date.toString().split("GMT")[0];
 };
+// markup inserting
 const insertMarkup = () => {
+	// clearing the previous application (if any)
+	document.querySelector(".app").innerHTML = `<div class="app__header">
+					<h1>Yet to be named Clinic</h1>
+				</div>`;
+
 	let markup = `
 			<ul class="app__details">
 				<li class="app__item app__item-1">

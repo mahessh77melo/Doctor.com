@@ -30,10 +30,13 @@
 		font-size: 2rem;
 		.name {
 			margin-right: 6rem;
+			@media only screen and (max-width: $bp-small) {
+				margin-bottom: 1.5rem;
+			}
 		}
 		@media only screen and (max-width: $bp-medium) {
 			margin-bottom: 2rem;
-			padding-bottom: 2rem;
+			padding-bottom: 3.333rem;
 			flex-direction: row;
 			border-bottom: 2px solid $sea-blue;
 		}

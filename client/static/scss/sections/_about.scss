@@ -7,6 +7,9 @@
 		flex-direction: column;
 		flex-grow: 1;
 	}
+	@media only screen and (max-width: $bp-small) {
+		margin: 4.5rem;
+	}
 	padding: 4rem;
 	position: relative;
 	&__left {

@@ -236,6 +236,9 @@
       -webkit-box-flex: 1;
           -ms-flex-positive: 1;
               flex-grow: 1; } }
+  @media only screen and (max-width: 37.5em) {
+    .about {
+      margin: 4.5rem; } }
   .about__left {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -260,7 +263,7 @@
   .about__right {
     max-width: 45rem;
     font-size: 2.2rem;
-    color: #777; }
+    color: #777877; }
   .about__back {
     position: absolute;
     font-size: 15rem;
@@ -394,7 +397,7 @@
         border-bottom: 1px solid #ccc;
         padding: 1.5rem 0;
         font-size: 1.7rem;
-        color: #777; }
+        color: #777877; }
     .contact__card-title {
       font-size: 2.2rem;
       position: absolute;
@@ -480,7 +483,7 @@
   .form__input, .form__description, .form__date {
     border: 2px solid #f7b2b1;
     outline: none;
-    color: #777;
+    color: #777877;
     border-radius: 3px;
     padding: 1.5rem 2.5rem;
     -webkit-transition: -webkit-box-shadow 0.25s ease-in;
@@ -599,10 +602,13 @@
     font-size: 2rem; }
     .app__item .name {
       margin-right: 6rem; }
+      @media only screen and (max-width: 37.5em) {
+        .app__item .name {
+          margin-bottom: 1.5rem; } }
     @media only screen and (max-width: 50em) {
       .app__item {
         margin-bottom: 2rem;
-        padding-bottom: 2rem;
+        padding-bottom: 3.333rem;
         -webkit-box-orient: horizontal;
         -webkit-box-direction: normal;
             -ms-flex-direction: row;

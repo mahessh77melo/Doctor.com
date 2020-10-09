@@ -28,7 +28,8 @@ now copy paste the path of this file in a browser and u are good to go. Revert i
 > Well you can view your own appointment by clicking the _"View my appointment"_ button at the landing page and feeding the details to fetch the same.
 
 > However, there is a better way, there is a file called, **test.js** inside the server folder. You can run `node test.js` in the command line to view all the entries so far in the database. You may very well find your entry there.
-> <br><br/>
+
+<br/>
 
 ## September 17 commit ->
 
@@ -56,7 +57,7 @@ I have used mongodb cloud db. This is for development purpose, obviously not for
 
 ---
 
-<br><br/>
+<br/>
 
 # October 9 commit
 

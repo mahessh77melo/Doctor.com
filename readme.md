@@ -4,7 +4,7 @@
 
 bro, if u haven't installed node in ur computer, do so and run `npm install` inside this directory for u to be able to make changes
 
-> Anyway, if u are planning on viewing the html file directly for a quick view, then look for the head part of the `index.html` file and make this change.
+> Anyway, if u are planning on viewing the html file directly for a quick view, then look for the head part of the **index.html** file and make this change.
 
 ```html
 <link rel="stylesheet" href="/css/base.css" />

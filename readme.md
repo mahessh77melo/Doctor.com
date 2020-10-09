@@ -1,23 +1,75 @@
-# October 3 commit
+# [Doctor.com](https://github.com/mahessh77melo/Doctor.com "Visit the repo")
+
+## To begin with-->
+
+bro, if u haven't installed node in ur computer, do so and run `npm install` inside this directory for u to be able to make changes
+
+> Anyway, if u are planning on viewing the html file directly for a quick view, then look for the head part of the `index.html` file and make this change.
+
+```html
+<link rel="stylesheet" href="/css/base.css" />
+```
+
+## change this to &darr;
+
+```html
+<link rel="stylesheet" href="/static/css/base.css" />
+```
+
+now copy paste the path of this file in a browser and u are good to go. Revert it back after u have finished the preview. Remember, no functional features will be available in this preview.
+
+## The legitimate way
+
+> After running `npm install` in the server directory, open the command prompt in this directory and type `npm start` and hit enter.
+> The browser will start automatically at the 3000 localhost port. Hit a reload if necessary. Test and verify the full functionality.
+
+## Does the Database work??
+
+> Well you can view your own appointment by clicking the _"View my appointment"_ button at the landing page and feeding the details to fetch the same.
+
+> However, there is a better way, there is a file called, **test.js** inside the server folder. You can run `node test.js` in the command line to view all the entries so far in the database. You may very well find your entry there.
+> <br><br/>
+
+## September 17 commit ->
+
+Footer is complete. Application form is yet to be completed.
+
+---
+
+## September 27 commit ->
+
+Set up the Node.js backend and basic routing. Also created a 404 page wtih basic styling.
+Served static files without express.js
+
+---
+
+## October 1 commit ->
+
+Bro i finally figured out date time strings and i kind of initialized the form. The input given in the front-end (browser) is available in the console at the backend. (node server console). Check it out and revert back.
+
+---
+
+## October 3 commit
 
 The database is set up and good to go.
 I have used mongodb cloud db. This is for development purpose, obviously not for deployment purpose.
 
-## Note
+---
 
-since i have used a new package, use `npm install mongoose` in the server folder before u start using
+<br><br/>
 
-## Verify the entries
+# October 9 commit
 
-try giving any new entries in the form application and it will be uploaded in the database. How would u know it.
-Just run the test.js file. because u can't really access my mongo cloud. (too complicated)
+## What has been done:
 
-- go to server folder and run `node test.js`
-- this is to be done after u have given any new entries in the localhost server.
-- u can find ur latest entry there
+- Wrote media queries in SCSS.
+- Compressed CSS file is ready.
+- Facility to view the previously booked appointment.
+- DataBase re-enabled.
 
-## quick way to run the server
+## What is to be done:
 
-after running npm install, run `npm run start` or just `npm start` ,it will automatically open firefox at the localhost:3000 port.
-if it causes problems, which it most likely won't, then run `npm run dev`.
-check it out and revert back
+- HTML fillers should be replaced with correct content.
+- New Database has to be setup and dbURI should be fetched from mongodb Atlas.
+- Way of querying the previous apppiointments may be changed.
+- Deployment

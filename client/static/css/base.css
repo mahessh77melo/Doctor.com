@@ -281,17 +281,60 @@
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
-            flex-direction: column; }
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin-right: 2rem; }
     .about__left .about__photo {
-      font-size: 25rem;
+      font-size: 7rem;
+      margin-right: 1rem;
       color: #ccc; }
       @media only screen and (max-width: 50em) {
         .about__left .about__photo {
-          font-size: 17rem; } }
+          font-size: 5rem; } }
     .about__left .about__name {
-      font-size: 5rem;
+      font-size: 3.5rem;
       letter-spacing: 3px;
       color: #052e8f; }
+    .about__left .about__banner {
+      height: 25rem;
+      width: 25rem;
+      outline: 10px solid #38cfba;
+      -webkit-box-shadow: 0 1rem 1.2rem rgba(0, 0, 0, 0.7);
+              box-shadow: 0 1rem 1.2rem rgba(0, 0, 0, 0.7);
+      outline-offset: 2rem;
+      -webkit-transition: all 0.3s;
+      transition: all 0.3s;
+      border-radius: 3px;
+      -o-object-fit: cover;
+         object-fit: cover;
+      opacity: 0.7;
+      margin: 3rem 0;
+      z-index: 2; }
+      @media only screen and (max-width: 50em) {
+        .about__left .about__banner {
+          margin-bottom: 6rem; } }
+      @media (hover: hover) {
+        .about__left .about__banner:hover {
+          outline-offset: 3.5rem;
+          -webkit-transform: scale(1.05);
+                  transform: scale(1.05);
+          -webkit-box-shadow: 0 2rem 2.5rem rgba(0, 0, 0, 0.45);
+                  box-shadow: 0 2rem 2.5rem rgba(0, 0, 0, 0.45); } }
+    .about__left .about__detail {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -ms-flex-item-align: start;
+          align-self: flex-start; }
     @media only screen and (max-width: 50em) {
       .about__left {
         margin-bottom: 5rem; } }
@@ -305,8 +348,8 @@
     display: inline-block;
     opacity: 0.075;
     font-weight: 700;
-    top: 50%;
-    left: 45%;
+    top: 45%;
+    left: 57%;
     -webkit-transform: translate(-50%, -50%) rotate(-20deg);
             transform: translate(-50%, -50%) rotate(-20deg); }
     @media only screen and (max-width: 37.5em) {

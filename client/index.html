@@ -15,14 +15,14 @@
 		<title>Doctor.com</title>
 	</head>
 	<body>
-		<section class="lander">
+		<section class="lander" id="lander">
 			<nav class="nav">
 				<ul class="nav__list">
-					<li class="nav__list-item nav__list-item-2">
-						<a class="nav__list--link" href="#about">About Me</a>
+					<li class="nav__list-item nav__list-item-2" onclick="goAbout()">
+						<a class="nav__list--link">About Me</a>
 					</li>
-					<li class="nav__list-item nav__list-item-3">
-						<a class="nav__list--link" href="#contact">Contact Us</a>
+					<li class="nav__list-item nav__list-item-3" onclick="goContact()">
+						<a class="nav__list--link">Contact Us</a>
 					</li>
 					<li class="nav__list-item nav__list-item-4">
 						<a class="nav__list--link" id="getdata">View my Appointment</a>
@@ -70,7 +70,7 @@
 			<div class="contact__cards">
 				<div class="contact__card contact__card--1">
 					<img
-						src="/img/doctor-4.jpg"
+						src="/img/doctor-8.jpg"
 						class="contact__card-img contact__card-img--1"
 						alt="Social networks"
 					/>
@@ -136,18 +136,28 @@
 					type="text"
 					name="patient"
 					id="name-pat"
+					placeholder="Full Name"
 					required
 				/>
 				<label for="age" class="form__label">Age of the Patient : </label>
-				<input class="form__input" type="number" name="age" id="age" required />
+				<input
+					class="form__input"
+					type="number"
+					placeholder="Specify the age"
+					name="age"
+					id="age"
+					required
+				/>
 				<label for="name-app" class="form__label">
-					Name of the Applicant :
+					Contact number of the Applicant/Guardian :
 				</label>
 				<input
 					class="form__input"
 					type="text"
 					name="applicant"
 					id="name-app"
+					pattern="[0-9]{10}"
+					placeholder="10 digit phone number"
 					required
 				/>
 				<label class="form__label" for="desc"
@@ -201,9 +211,9 @@
 			<ul class="footer__items">
 				<li class="footer__item">Privacy</li>
 				<li class="footer__item">Disclaimer</li>
-				<li class="footer__item">Apply for Job</li>
+				<li class="footer__item">Leave a review</li>
 				<li class="footer__item">Support</li>
-				<li class="footer__item">Home</li>
+				<li class="footer__item" onclick="goHome()">Home</li>
 			</ul>
 			<p class="footer__copy">
 				This webpage is designed and developed by Magesh J &copy; , Final year

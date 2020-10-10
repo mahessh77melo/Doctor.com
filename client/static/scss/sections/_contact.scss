@@ -60,7 +60,7 @@
 		align-items: center;
 		&-img {
 			height: 20rem;
-			opacity: 0.3;
+			opacity: 0.5;
 			width: 30rem;
 			transition: all 0.5s ease-in;
 			object-fit: cover;
@@ -89,7 +89,7 @@
 		}
 		@media (hover: hover) {
 			&:hover {
-				transform: scale(0.97);
+				transform: scale(0.97) rotate(2deg);
 				box-shadow: 0 0.3rem 0.4rem rgba($black-col, 0.35);
 			}
 			&:hover &-img {

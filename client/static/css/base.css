@@ -112,7 +112,7 @@
     @media (hover: none) {
       .nav__list-item {
         font-weight: 600;
-        font-size: 2rem;
+        font-size: 1.7rem;
         letter-spacing: 1px; } }
 
 .lander__content {
@@ -354,7 +354,7 @@
             align-items: center; }
     .contact__card-img {
       height: 20rem;
-      opacity: 0.3;
+      opacity: 0.5;
       width: 30rem;
       -webkit-transition: all 0.5s ease-in;
       transition: all 0.5s ease-in;
@@ -372,8 +372,8 @@
       background-image: linear-gradient(to right, rgba(56, 207, 186, 0.85), rgba(56, 207, 186, 0.3)); }
     @media (hover: hover) {
       .contact__card:hover {
-        -webkit-transform: scale(0.97);
-                transform: scale(0.97);
+        -webkit-transform: scale(0.97) rotate(2deg);
+                transform: scale(0.97) rotate(2deg);
         -webkit-box-shadow: 0 0.3rem 0.4rem rgba(0, 0, 0, 0.35);
                 box-shadow: 0 0.3rem 0.4rem rgba(0, 0, 0, 0.35); }
       .contact__card:hover .contact__card-img {
@@ -496,6 +496,8 @@
     .form__input:focus, .form__description:focus, .form__date:focus {
       -webkit-box-shadow: 0 0.3rem 0.7rem rgba(56, 207, 186, 0.5), 0 -0.3rem 0.7rem rgba(56, 207, 186, 0.5);
               box-shadow: 0 0.3rem 0.7rem rgba(56, 207, 186, 0.5), 0 -0.3rem 0.7rem rgba(56, 207, 186, 0.5); }
+    .form__input:invalid .form__input:not(:empty), .form__description:invalid .form__input:not(:empty), .form__date:invalid .form__input:not(:empty), .form__input:invalid .form__description:not(:empty), .form__description:invalid .form__description:not(:empty), .form__date:invalid .form__description:not(:empty), .form__input:invalid .form__date:not(:empty), .form__description:invalid .form__date:not(:empty), .form__date:invalid .form__date:not(:empty) {
+      border: 2px solid #10b810; }
   .form__date {
     padding: 3rem;
     justify-self: flex-start; }

@@ -4,6 +4,9 @@ console.log("connected");
 const viewBtn = document.querySelector("#getdata");
 const form = document.querySelector("#doc__form");
 const appSection = document.querySelector("#appointment");
+const landerSection = document.querySelector("#lander");
+const aboutSection = document.querySelector("#about");
+const contactSection = document.querySelector("#contact");
 // fetch request variable for the application
 let application;
 
@@ -46,10 +49,12 @@ const insertMarkup = () => {
 	document.querySelector(".app").insertAdjacentHTML("beforeend", markup);
 };
 viewBtn.addEventListener("click", () => {
-	let pname, aname;
-	pname = prompt("\nEnter the name of the patient : (Case sensitive)\n");
-	aname = prompt("\nEnter the name of the Applicant : (Case sensitive)\n");
-	fetch(`/getdata?patient=${pname}&applicant=${aname}`)
+	let pname, anumber;
+	pname = prompt("\nEnter the full name of the patient : (Case sensitive)\n");
+	anumber = prompt(
+		"\nEnter the registered contact number : (Applicant/Guardian)\n"
+	);
+	fetch(`/getdata?patient=${pname}&applicant=${anumber.toString()}`)
 		.then((response) => response.json())
 		.then((json) => {
 			application = json;
@@ -60,3 +65,14 @@ viewBtn.addEventListener("click", () => {
 		})
 		.catch((err) => console.log(err));
 });
+
+// scroll functions
+const goHome = () => {
+	landerSection.scrollIntoView();
+};
+const goAbout = () => {
+	aboutSection.scrollIntoView();
+};
+const goContact = () => {
+	contactSection.scrollIntoView();
+};

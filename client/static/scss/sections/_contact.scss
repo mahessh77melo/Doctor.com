@@ -13,7 +13,7 @@
 	@media only screen and (max-width: $bp-medium) {
 		background-color: none;
 		background-image: url("../img/doctor-7.jpg"),
-			linear-gradient(to right, rgba($white-col, 0.4), rgba($white-col, 0.6));
+			linear-gradient(to right, rgba($black-col, 0.4), rgba($black-col, 0.6));
 		background-size: cover;
 		background-blend-mode: screen;
 	}
@@ -95,11 +95,11 @@
 		}
 		@media (hover: hover) {
 			&:hover {
-				transform: scale(0.97) rotate(2deg);
+				transform: scale(0.97) translateY(1rem);
 				box-shadow: 0 0.3rem 0.4rem rgba($black-col, 0.35);
 			}
 			&:hover &-img {
-				opacity: 0.8;
+				opacity: 0.9;
 			}
 		}
 		&-logo {

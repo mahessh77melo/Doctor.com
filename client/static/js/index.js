@@ -18,11 +18,12 @@ const dateParser = (realDate) => {
 // markup inserting
 const insertMarkup = () => {
 	// clearing the previous application (if any)
-	document.querySelector(".app").innerHTML = `<div class="app__header">
-					<h1>Yet to be named Clinic</h1>
-				</div>`;
+	document.querySelector(".app").innerHTML = ``;
 
 	let markup = `
+			<div class="app__header">
+					<h1>Smile Fix</h1>
+			</div>
 			<ul class="app__details">
 				<li class="app__item app__item-1">
 					<span class="name"> Name of the Patient : </span>
@@ -46,7 +47,9 @@ const insertMarkup = () => {
 				</li>
 			</ul>
 	`;
-	document.querySelector(".app").insertAdjacentHTML("beforeend", markup);
+	// Only insert the application into the dom if there is a valid returned value.
+	if (application)
+		document.querySelector(".app").insertAdjacentHTML("beforeend", markup);
 };
 viewBtn.addEventListener("click", () => {
 	let pname, anumber;

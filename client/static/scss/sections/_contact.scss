@@ -11,11 +11,14 @@
 		rgba($yel-2, 0.85) 46%
 	);
 	@media only screen and (max-width: $bp-medium) {
-		background-color: none;
-		background-image: url("../img/doctor-7.jpg"),
-			linear-gradient(to right, rgba($black-col, 0.4), rgba($black-col, 0.6));
+		background-image: url("../img/doctor-9.jpg"),
+			linear-gradient(
+				to right bottom,
+				rgba($black-col, 0.3),
+				rgba($black-col, 0.8)
+			);
 		background-size: cover;
-		background-blend-mode: screen;
+		background-blend-mode: multiply;
 	}
 	@media only screen and (min-width: $bp-large) {
 		min-height: 100vh;
@@ -52,10 +55,12 @@
 		flex-wrap: wrap;
 		justify-content: space-around;
 		align-items: stretch;
+		backface-visibility: hidden;
 	}
 	&__card {
-		border-radius: 5px;
+		border-radius: 3px;
 		overflow: hidden;
+		backdrop-filter: blur(5px);
 		margin: 2rem;
 		display: flex;
 		position: relative;
@@ -95,11 +100,15 @@
 		}
 		@media (hover: hover) {
 			&:hover {
-				transform: scale(0.97) translateY(1rem);
+				transform: perspective(1px) scale(0.97) translateY(1rem) translateZ(0);
+				border-radius: 20px;
 				box-shadow: 0 0.3rem 0.4rem rgba($black-col, 0.35);
 			}
 			&:hover &-img {
 				opacity: 0.9;
+			}
+			&:hover &-info {
+				background-color: lighten($color: $light-grey, $amount: 18%);
 			}
 		}
 		&-logo {
@@ -112,13 +121,17 @@
 			list-style: none;
 			background-color: $white-col;
 			padding-top: 3rem;
+			transition: background-color 0.2s;
 			min-height: 25rem;
 			text-align: center;
+			backface-visibility: hidden;
 			align-self: stretch;
 			&-item {
 				border-bottom: 1px solid $light-grey;
 				padding: 1.5rem 0;
+				backface-visibility: hidden;
 				font-size: 1.7rem;
+				-webkit-font-smoothing: subpixel-antialiased;
 				color: $grey-col;
 			}
 		}

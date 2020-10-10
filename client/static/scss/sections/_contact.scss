@@ -58,9 +58,8 @@
 		backface-visibility: hidden;
 	}
 	&__card {
-		border-radius: 3px;
+		border-radius: 7px;
 		overflow: hidden;
-		backdrop-filter: blur(5px);
 		margin: 2rem;
 		display: flex;
 		position: relative;
@@ -101,7 +100,8 @@
 		@media (hover: hover) {
 			&:hover {
 				transform: perspective(1px) scale(0.97) translateY(1rem) translateZ(0);
-				border-radius: 20px;
+				border-radius: 0;
+				border-bottom-left-radius: 100px;
 				box-shadow: 0 0.3rem 0.4rem rgba($black-col, 0.35);
 			}
 			&:hover &-img {

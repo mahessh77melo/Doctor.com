@@ -371,10 +371,8 @@
     -webkit-backface-visibility: hidden;
             backface-visibility: hidden; }
   .contact__card {
-    border-radius: 3px;
+    border-radius: 7px;
     overflow: hidden;
-    -webkit-backdrop-filter: blur(5px);
-            backdrop-filter: blur(5px);
     margin: 2rem;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -413,7 +411,8 @@
       .contact__card:hover {
         -webkit-transform: perspective(1px) scale(0.97) translateY(1rem) translateZ(0);
                 transform: perspective(1px) scale(0.97) translateY(1rem) translateZ(0);
-        border-radius: 20px;
+        border-radius: 0;
+        border-bottom-left-radius: 100px;
         -webkit-box-shadow: 0 0.3rem 0.4rem rgba(0, 0, 0, 0.35);
                 box-shadow: 0 0.3rem 0.4rem rgba(0, 0, 0, 0.35); }
       .contact__card:hover .contact__card-img {

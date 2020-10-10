@@ -39,6 +39,12 @@
 		@media only screen and (max-width: $bp-medium) {
 			font-size: 7rem;
 			text-shadow: 0 1rem 1.3rem rgba($black-col, 0.25);
+			background-image: linear-gradient(
+				135deg,
+				$yel-2 0%,
+				$yel-2 47.5%,
+				$blue-1 47.5%
+			);
 		}
 	}
 	&__cards {

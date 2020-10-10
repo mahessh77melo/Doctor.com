@@ -321,7 +321,8 @@
     @media only screen and (max-width: 50em) {
       .contact__heading {
         font-size: 7rem;
-        text-shadow: 0 1rem 1.3rem rgba(0, 0, 0, 0.25); } }
+        text-shadow: 0 1rem 1.3rem rgba(0, 0, 0, 0.25);
+        background-image: linear-gradient(135deg, #ffd21f 0%, #ffd21f 47.5%, #091edf 47.5%); } }
   .contact__cards {
     display: -webkit-box;
     display: -ms-flexbox;

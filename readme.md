@@ -70,7 +70,15 @@ I have used mongodb cloud db. This is for development purpose, obviously not for
 
 ## What is to be done:
 
-- HTML fillers should be replaced with correct content.
+- ~~HTML fillers should be replaced with correct content~~.
 - New Database has to be setup and dbURI should be fetched from mongodb Atlas.
-- Way of querying the previous apppiointments may be changed.
+- ~~Way of querying the previous apppiointments may be changed.~~
 - Deployment
+
+## October 10 Commit-->
+
+- Altered media queries,
+- Fixed the markup texts with actual values
+- added form validation
+- setup new collections replacing the old collections
+- changed images

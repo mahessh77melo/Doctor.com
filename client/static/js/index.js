@@ -79,3 +79,7 @@ const goAbout = () => {
 const goContact = () => {
 	contactSection.scrollIntoView();
 };
+const goForm = () => {
+	form.scrollIntoView();
+	document.querySelector("#name_pat").focus();
+};

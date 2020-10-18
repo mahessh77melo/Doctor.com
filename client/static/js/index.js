@@ -22,7 +22,7 @@ const insertMarkup = () => {
 
 	let markup = `
 			<div class="app__header">
-					<h1>Smile Fix</h1>
+					<h1>Smile Fix dental Care, Vandalur</h1>
 			</div>
 			<ul class="app__details">
 				<li class="app__item app__item-1">
@@ -30,7 +30,7 @@ const insertMarkup = () => {
 					<span class="value">${application.patient}</span>
 				</li>
 				<li class="app__item app__item-2">
-					<span class="name">Name of the Applicant : </span>
+					<span class="name">Contact of the Applicant : </span>
 					<span class="value">${application.applicant}</span>
 				</li>
 				<li class="app__item app__item-3">
@@ -47,24 +47,33 @@ const insertMarkup = () => {
 				</li>
 			</ul>
 	`;
-	// Only insert the application into the dom if there is a valid returned value.
-	if (application)
-		document.querySelector(".app").insertAdjacentHTML("beforeend", markup);
+
+	document.querySelector(".app").insertAdjacentHTML("beforeend", markup);
 };
 viewBtn.addEventListener("click", () => {
 	let pname, anumber;
-	pname = prompt("\nEnter the full name of the patient : (Case sensitive)\n");
+	/* pname = prompt("\nEnter the full name of the patient : (Case sensitive)\n");
 	anumber = prompt(
 		"\nEnter the registered contact number : (Applicant/Guardian)\n"
 	);
-	fetch(`/getdata?patient=${pname}&applicant=${anumber.toString()}`)
+	fetch(`/getdata?patient=${pname}&applicant=${anumber.toString()}`) */ fetch(
+		"/getdata?patient=tester&applicant=9999977777"
+	)
 		.then((response) => response.json())
 		.then((json) => {
 			application = json;
 			console.log(application);
-			insertMarkup();
-			appSection.style.display = "block";
-			appSection.scrollIntoView();
+			// Only insert the application into the dom if there is a valid returned value.
+			if (application) {
+				insertMarkup();
+				appSection.style.display = "block";
+				appSection.scrollIntoView();
+			} else {
+				// Alert the user that the given values are wrong
+				alert(
+					"The application doesn't exist! Kindly double-check the details."
+				);
+			}
 		})
 		.catch((err) => console.log(err));
 });
@@ -80,6 +89,6 @@ const goContact = () => {
 	contactSection.scrollIntoView();
 };
 const goForm = () => {
+	document.querySelector("#name-pat").focus(); // Focus on the first input field
 	form.scrollIntoView();
-	document.querySelector("#name_pat").focus();
 };

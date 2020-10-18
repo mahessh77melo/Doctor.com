@@ -7,11 +7,20 @@
 	@media only screen and (max-width: $bp-medium) {
 		margin: 10rem 5rem;
 	}
+	@media only screen and (max-width: $bp-small) {
+		padding: 8rem 2rem;
+		margin: 8rem 3rem;
+	}
 	&__header {
 		font-size: 3rem;
 		color: $dark-violet;
 		text-align: center;
 		margin-bottom: 10rem;
+		@media only screen and (max-width: $bp-small) {
+			font-size: 2rem;
+			margin-bottom: 6rem;
+			padding: 0 3rem;
+		}
 	}
 	&__details {
 		list-style: none;
@@ -19,6 +28,9 @@
 		display: flex;
 		color: $black-col;
 		flex-direction: column;
+		@media only screen and (max-width: $bp-largest) {
+			padding: 0 15rem;
+		}
 		@media only screen and (max-width: $bp-large) {
 			padding: 0 5rem;
 		}
@@ -32,6 +44,12 @@
 			margin-right: 6rem;
 			@media only screen and (max-width: $bp-small) {
 				margin-bottom: 1.5rem;
+				font-weight: 700;
+			}
+		}
+		.value {
+			@media only screen and (max-width: $bp-small) {
+				font-weight: 400;
 			}
 		}
 		@media only screen and (max-width: $bp-medium) {

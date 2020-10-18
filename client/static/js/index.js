@@ -52,13 +52,11 @@ const insertMarkup = () => {
 };
 viewBtn.addEventListener("click", () => {
 	let pname, anumber;
-	/* pname = prompt("\nEnter the full name of the patient : (Case sensitive)\n");
+	pname = prompt("\nEnter the full name of the patient : (Case sensitive)\n");
 	anumber = prompt(
 		"\nEnter the registered contact number : (Applicant/Guardian)\n"
 	);
-	fetch(`/getdata?patient=${pname}&applicant=${anumber.toString()}`) */ fetch(
-		"/getdata?patient=tester&applicant=9999977777"
-	)
+	fetch(`/getdata?patient=${pname}&applicant=${anumber.toString()}`)
 		.then((response) => response.json())
 		.then((json) => {
 			application = json;

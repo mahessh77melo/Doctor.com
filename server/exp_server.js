@@ -3,24 +3,21 @@ const path = require("path");
 const morgan = require("morgan");
 const Appointment = require("./db_schema");
 const mongoose = require("mongoose");
-const http = require("http");
 const url = require("url");
+const { dbLocal, dbAtlas } = require("./mongo_data");
 
 const app = express();
 const baseDir = path.dirname(__dirname);
+const port = 3000;
 
-// Connect to mongodb server (local or atlas)
-const dbAtlas =
-	"mongodb+srv://magesh:mongo123@mycluster.rhps1.mongodb.net/doctor_db?retryWrites=true&w=majority";
-const dbLocal = "mongodb://localhost:27107/doctor_db"; // local db url
-
+// DB connnection
 mongoose
 	.connect(dbAtlas, { useNewUrlParser: true, useUnifiedTopology: true })
 	.then((res) => {
 		// Rendering the page at localhost and link for the localhost
 		console.log("connected to the database");
-		app.listen(3000);
-		console.log("Rendering the page at http://localhost:3000");
+		app.listen(port);
+		console.log(`Rendering the page at http://localhost:${port}`);
 	})
 	.catch((err) => console.log(err));
 
@@ -37,9 +34,8 @@ app.get("/", (req, res) => {
 });
 
 //getting the form input
-let body, onDate;
 app.post("/submit", (req, res) => {
-	body = req.body;
+	let body = req.body;
 	console.log(body);
 	const appointment = new Appointment(req.body);
 	appointment
@@ -48,11 +44,9 @@ app.post("/submit", (req, res) => {
 			res.redirect("/");
 		})
 		.catch((err) => console.log(err));
-	// res.redirect("/");
-	const [year, month, date] = req.body.date.split("-");
-	const appTime = new Date(year, month - 1, date);
-	onDate = appTime.toDateString();
 });
+
+// Middleware for api request from frontend application query
 app.get("/getdata", (req, res) => {
 	let queryObject = url.parse(req.url, true).query;
 	const query = JSON.parse(JSON.stringify(queryObject));
@@ -66,11 +60,9 @@ app.get("/getdata", (req, res) => {
 		}
 	});
 });
-app.get("/application", (req, res) => {
-	res.redirect("/#application");
-});
 
 // 404 page rendering
+// If none of the above is matched, this code is read by the compiler and thus the 404 page is served.
 app.use((req, res) => {
 	res
 		.status(404)

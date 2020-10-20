@@ -1,8 +1,8 @@
-// CHECK IF NOTHING IS WRONG
+// CHECK IF EVERYTHING IS RIGHT
 console.log("connected");
 // DOM elements
 const viewBtn = document.querySelector("#getdata");
-const form = document.querySelector("#doc__form");
+const formSection = document.querySelector("#doc__form");
 const appSection = document.querySelector("#appointment");
 const landerSection = document.querySelector("#lander");
 const aboutSection = document.querySelector("#about");
@@ -47,15 +47,15 @@ const insertMarkup = () => {
 				</li>
 			</ul>
 	`;
-
+	//  inserting the markup into the DOM
 	document.querySelector(".app").insertAdjacentHTML("beforeend", markup);
 };
+
 viewBtn.addEventListener("click", () => {
 	let pname, anumber;
 	pname = prompt("\nEnter the full name of the patient : (Case sensitive)\n");
-	anumber = prompt(
-		"\nEnter the registered contact number : (Applicant/Guardian)\n"
-	);
+	anumber = prompt("\nEnter the registered contact number : \n");
+	// Sending api request to our own server.
 	fetch(`/getdata?patient=${pname}&applicant=${anumber.toString()}`)
 		.then((response) => response.json())
 		.then((json) => {
@@ -87,6 +87,8 @@ const goContact = () => {
 	contactSection.scrollIntoView();
 };
 const goForm = () => {
-	document.querySelector("#name-pat").focus(); // Focus on the first input field
-	form.scrollIntoView();
+	// Focus on the first input field
+	document.querySelector("#name-pat").focus();
+	formSection.scrollIntoView();
 };
+// Called via the HTML onclick functions

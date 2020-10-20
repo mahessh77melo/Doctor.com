@@ -468,7 +468,9 @@
       width: auto;
       -webkit-transform: translateX(-2rem);
               transform: translateX(-2rem);
-      color: #091edf; }
+      color: #091edf;
+      -webkit-filter: drop-shadow(0 0.3rem 0.1rem rgba(0, 0, 0, 0.4));
+              filter: drop-shadow(0 0.3rem 0.1rem rgba(0, 0, 0, 0.4)); }
     .contact__card-info {
       list-style: none;
       background-color: #ffffff;

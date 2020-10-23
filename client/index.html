@@ -19,13 +19,13 @@
 			<nav class="nav">
 				<ul class="nav__list">
 					<li class="nav__list-item nav__list-item-2" onclick="goAbout()">
-						<a class="nav__list--link">About Me</a>
+						About Me
 					</li>
 					<li class="nav__list-item nav__list-item-3" onclick="goContact()">
-						<a class="nav__list--link">Contact Us</a>
+						Contact Us
 					</li>
-					<li class="nav__list-item nav__list-item-4">
-						<a class="nav__list--link" id="getdata">View my Appointment</a>
+					<li class="nav__list-item nav__list-item-4" id="getdata">
+						View my Appointment
 					</li>
 				</ul>
 			</nav>
@@ -33,11 +33,33 @@
 				<h1 class="lander__title">Smile Fix</h1>
 				<h3 class="lander__title lander__title--small">Dental Care</h3>
 				<button onclick="goForm()" class="lander__plus">
-					<a> Book an appointment </a>
+					Book an appointment
 					<span class="material-icons lander__plus--icon"> alarm_add </span>
 				</button>
 			</div>
 		</section>
+		<form class="modal-form hidden" onsubmit="getForm(event)">
+			<button class="close-modal">&times;</button>
+			<h1>Kindly feed the details</h1>
+			<input
+				type="text"
+				id="modal-patient"
+				name="patient"
+				class="form__input"
+				value=""
+				placeholder="Patient Name"
+			/>
+			<input
+				type="text"
+				id="modal-applicant"
+				name="applicant"
+				class="form__input"
+				value=""
+				placeholder="Phone Number"
+			/>
+			<button type="submit" class="form__btn">Show Results</button>
+		</form>
+		<div class="overlay hidden"></div>
 
 		<section class="about" id="about">
 			<div class="about__left">

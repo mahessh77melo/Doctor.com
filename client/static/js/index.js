@@ -7,6 +7,9 @@ const appSection = document.querySelector("#appointment");
 const landerSection = document.querySelector("#lander");
 const aboutSection = document.querySelector("#about");
 const contactSection = document.querySelector("#contact");
+const modalFormSection = document.querySelector(".modal-form");
+const overlay = document.querySelector(".overlay");
+const closeModal = document.querySelector(".close-modal");
 // fetch request variable for the application
 let application;
 
@@ -51,32 +54,59 @@ const insertMarkup = () => {
 	document.querySelector(".app").insertAdjacentHTML("beforeend", markup);
 };
 
-viewBtn.addEventListener("click", () => {
-	let pname, anumber;
-	pname = prompt("\nEnter the full name of the patient : (Case sensitive)\n");
-	anumber = prompt("\nEnter the registered contact number : \n");
-	// Sending api request to our own server.
-	fetch(`/getdata?patient=${pname}&applicant=${anumber.toString()}`)
-		.then((response) => response.json())
-		.then((json) => {
-			application = json;
-			console.log(application);
-			// Only insert the application into the dom if there is a valid returned value.
-			if (application) {
-				insertMarkup();
-				appSection.style.display = "block";
-				appSection.scrollIntoView();
-			} else {
-				// Alert the user that the given values are wrong
-				alert(
-					"The application doesn't exist! Kindly double-check the details."
-				);
-			}
-		})
-		.catch((err) => console.log(err));
+// Modal form handling
+const showModal = () => {
+	modalFormSection.classList.remove("hidden");
+	overlay.classList.remove("hidden");
+};
+
+const hideModal = () => {
+	modalFormSection.classList.add("hidden");
+	overlay.classList.add("hidden");
+};
+// Event Listeners
+viewBtn.addEventListener("click", showModal);
+overlay?.addEventListener("click", hideModal);
+closeModal?.addEventListener("click", hideModal);
+document.addEventListener("keydown", (e) => {
+	if (e.key === "Escape") {
+		console.log("escape is pressed");
+		hideModal();
+	}
 });
 
+// Get appointment query details
+const getForm = (e) => {
+	console.log("called");
+	e.preventDefault();
+	const pname = document.querySelector("#modal-patient").value;
+	const anumber = document.querySelector("#modal-applicant").value;
+	pname &&
+		anumber &&
+		fetch(`/getdata?patient=${pname}&applicant=${anumber.toString()}`)
+			.then((response) => response.json())
+			.then((json) => {
+				application = json;
+				console.log(application);
+				// Only insert the application into the dom if there is a valid returned value.
+				if (application) {
+					insertMarkup();
+					appSection.style.display = "block";
+					appSection.scrollIntoView();
+					hideModal();
+				} else {
+					// Alert the user that the given values are wrong
+					alert(
+						"The application doesn't exist! Kindly double-check the details."
+					);
+				}
+			})
+			.catch((err) => console.log(err));
+	return true;
+};
+
 // scroll functions
+// Called via the HTML onclick functions
 const goHome = () => {
 	landerSection.scrollIntoView();
 };
@@ -91,4 +121,3 @@ const goForm = () => {
 	document.querySelector("#name-pat").focus();
 	formSection.scrollIntoView();
 };
-// Called via the HTML onclick functions

@@ -16,7 +16,7 @@
 		"server": "start firefox http://localhost:3000",
 		"dev": "nodemon exp_server.js",
 		"view": "node exp_server.js",
-		"start": "npm-run-all server dev"
+		"start": "npm-run-all -s server dev "
 	},
 	"author": "Magesh J",
 	"license": "ISC"

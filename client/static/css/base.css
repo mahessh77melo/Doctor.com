@@ -63,8 +63,8 @@
     opacity: 1; } }
 
 .lander {
-  background-image: -webkit-gradient(linear, left top, right top, from(#091edf), to(#052e8f));
-  background-image: linear-gradient(to right, #091edf, #052e8f);
+  background-image: -webkit-gradient(linear, left top, right top, from(#031bee), to(#03287c));
+  background-image: linear-gradient(to right, #031bee, #03287c);
   background-size: cover;
   min-height: 100vh;
   border-bottom-left-radius: 370px;
@@ -126,7 +126,7 @@
         border: 3px solid #ffbf18;
         color: #ffbf18; }
       .nav__list-item:active {
-        color: #091edf;
+        color: #031bee;
         background-color: #ffbf18;
         border: 2px solid #ffbf18; } }
     @media (hover: none) {
@@ -233,7 +233,7 @@
   .lander__plus--icon {
     margin-left: 2rem;
     font-size: 3rem;
-    color: #052e8f; }
+    color: #03287c; }
     @media (hover: none) {
       .lander__plus--icon {
         -webkit-animation: shake 1s;
@@ -323,7 +323,7 @@
     .about__left .about__name {
       font-size: 3.5rem;
       letter-spacing: 3px;
-      color: #052e8f; }
+      color: #03287c; }
     .about__left .about__banner {
       height: 25rem;
       width: 25rem;
@@ -399,7 +399,7 @@
           justify-content: space-between;
   margin: 7rem 0;
   padding: 4rem 0;
-  background-image: linear-gradient(105deg, rgba(9, 30, 223, 0.85) 0%, rgba(9, 30, 223, 0.85) 46%, rgba(255, 210, 31, 0.85) 46%); }
+  background-image: linear-gradient(105deg, #031bee 0%, #031bee 46%, rgba(255, 210, 31, 0.85) 46%); }
   @media only screen and (max-width: 50em) {
     .contact {
       background-image: url("../img/doctor-9.jpg"), -webkit-gradient(linear, left top, right bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.8)));
@@ -412,7 +412,7 @@
   .contact__heading {
     font-size: 10rem;
     text-transform: uppercase;
-    background-image: linear-gradient(105deg, #ffd21f 0%, #ffd21f 50.4%, #091edf 50.4%);
+    background-image: linear-gradient(105deg, #ffd21f 0%, #ffd21f 50.4%, #031bee 50.4%);
     color: transparent;
     background-clip: text;
     -webkit-background-clip: text;
@@ -424,7 +424,7 @@
       .contact__heading {
         font-size: 7rem;
         text-shadow: 0 1rem 1.3rem rgba(0, 0, 0, 0.25);
-        background-image: linear-gradient(135deg, #ffd21f 0%, #ffd21f 47.5%, #091edf 47.5%); } }
+        background-image: linear-gradient(135deg, #ffd21f 0%, #ffd21f 47.5%, #031bee 47.5%); } }
   .contact__cards {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -492,7 +492,7 @@
       width: auto;
       -webkit-transform: translateX(-2rem);
               transform: translateX(-2rem);
-      color: #091edf;
+      color: #031bee;
       -webkit-filter: drop-shadow(0 0.3rem 0.1rem rgba(0, 0, 0, 0.4));
               filter: drop-shadow(0 0.3rem 0.1rem rgba(0, 0, 0, 0.4)); }
     .contact__card-info {

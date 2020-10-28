@@ -53,6 +53,8 @@
 				name="patient"
 				class="form__input"
 				value=""
+				pattern="[A-Za-z\s]{3,}"
+				title="atleast three characters"
 				placeholder="Patient Name"
 			/>
 			<input
@@ -61,6 +63,8 @@
 				name="applicant"
 				class="form__input"
 				value=""
+				pattern="[0-9]{10}"
+				title="10 digit phone number"
 				placeholder="Phone Number"
 			/>
 			<button type="submit" class="form__btn">Show Results</button>

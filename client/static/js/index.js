@@ -56,6 +56,8 @@ const insertMarkup = () => {
 
 // Modal form handling
 const showModal = () => {
+	document.querySelector("#modal-patient").value = "";
+	document.querySelector("#modal-applicant").value = "";
 	modalFormSection.classList.remove("hidden");
 	overlay.classList.remove("hidden");
 };

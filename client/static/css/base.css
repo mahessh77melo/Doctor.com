@@ -285,6 +285,7 @@
           flex-direction: row;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  scrollbar-width: none;
   padding: 4rem;
   position: relative; }
   @media only screen and (max-width: 50em) {

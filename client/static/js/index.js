@@ -10,6 +10,10 @@ const contactSection = document.querySelector("#contact");
 const modalFormSection = document.querySelector(".modal-form");
 const overlay = document.querySelector(".overlay");
 const closeModal = document.querySelector(".close-modal");
+const navAbout = document.querySelector("#goAbout");
+const navContact = document.querySelector("#goContact");
+const footerHome = document.querySelector("#goHome");
+const bookBtn = document.querySelector(".lander__plus");
 // fetch request variable for the application
 let application;
 
@@ -107,6 +111,11 @@ const getForm = (e) => {
 	return true;
 };
 
+// scroll event listeners
+navAbout.addEventListener("click", goAbout);
+navContact.addEventListener("click", goContact);
+footerHome.addEventListener("click", goHome);
+bookBtn.addEventListener("click", goForm);
 // scroll functions
 // Called via the HTML onclick functions
 const goHome = () => {

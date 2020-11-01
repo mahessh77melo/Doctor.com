@@ -21,10 +21,8 @@
 		<section class="lander" id="lander">
 			<nav class="nav">
 				<ul class="nav__list">
-					<li class="nav__list-item nav__list-item-2" onclick="goAbout()">
-						About Me
-					</li>
-					<li class="nav__list-item nav__list-item-3" onclick="goContact()">
+					<li class="nav__list-item nav__list-item-2" id="goAbout">About Me</li>
+					<li class="nav__list-item nav__list-item-3" id="goContact">
 						Contact Us
 					</li>
 					<li class="nav__list-item nav__list-item-4" id="getdata">
@@ -35,7 +33,7 @@
 			<div class="lander__content">
 				<h1 class="lander__title">Smile Fix</h1>
 				<h3 class="lander__title lander__title--small">Dental Care</h3>
-				<button onclick="goForm()" class="lander__plus">
+				<button class="lander__plus">
 					Book an appointment
 					<span class="material-icons lander__plus--icon"> alarm_add </span>
 				</button>
@@ -261,7 +259,7 @@
 				<li class="footer__item">Disclaimer</li>
 				<li class="footer__item">Leave a review</li>
 				<li class="footer__item">Support</li>
-				<li class="footer__item" onclick="goHome()">Home</li>
+				<li class="footer__item" id="goHome">Home</li>
 			</ul>
 			<p class="footer__copy">
 				This webpage is designed and developed by Magesh J &copy; , Final year

@@ -111,11 +111,6 @@ const getForm = (e) => {
 	return true;
 };
 
-// scroll event listeners
-navAbout.addEventListener("click", goAbout);
-navContact.addEventListener("click", goContact);
-footerHome.addEventListener("click", goHome);
-bookBtn.addEventListener("click", goForm);
 // scroll functions
 // Called via the HTML onclick functions
 const goHome = () => {
@@ -132,3 +127,8 @@ const goForm = () => {
 	document.querySelector("#name-pat").focus();
 	formSection.scrollIntoView();
 };
+// scroll event listeners
+navAbout.addEventListener("click", goAbout);
+navContact.addEventListener("click", goContact);
+footerHome.addEventListener("click", goHome);
+bookBtn.addEventListener("click", goForm);

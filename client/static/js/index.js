@@ -132,3 +132,23 @@ navAbout.addEventListener("click", goAbout);
 navContact.addEventListener("click", goContact);
 footerHome.addEventListener("click", goHome);
 bookBtn.addEventListener("click", goForm);
+
+// REVEALING ELEMENTS ON SCROLL
+const allSections = [aboutSection, contactSection, formSection];
+function reveal(e) {
+	const [entry] = e;
+	const target = entry.target;
+	console.log(target);
+	if (entry.isIntersecting) {
+		target.classList.remove("section--hidden");
+		sectionObserver.unobserve(target);
+	}
+}
+const sectionObserver = new IntersectionObserver(reveal, {
+	root: null,
+	threshold: 0.4,
+});
+allSections.forEach((sec) => {
+	sectionObserver.observe(sec);
+	sec.classList.add("section--hidden");
+});

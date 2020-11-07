@@ -685,14 +685,15 @@
     font-size: 1.7rem;
     padding: 7rem 0;
     border-bottom: 2px solid #f7b2b1; }
-  .footer__item {
+  .footer__item > a {
+    text-decoration: none;
     color: #f7b2b1;
     cursor: pointer;
     padding: 0.5rem 1rem;
     -webkit-transition: all 0.2s ease-out;
     transition: all 0.2s ease-out; }
     @media (hover: hover) {
-      .footer__item:hover {
+      .footer__item > a:hover {
         background-color: #f7b2b1;
         -webkit-backface-visibility: hidden;
                 backface-visibility: hidden;

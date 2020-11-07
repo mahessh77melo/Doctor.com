@@ -12,7 +12,8 @@
 		padding: 7rem 0;
 		border-bottom: 2px solid $melon;
 	}
-	&__item {
+	&__item > a {
+		text-decoration: none;
 		color: $melon;
 		cursor: pointer;
 		padding: 0.5rem 1rem;

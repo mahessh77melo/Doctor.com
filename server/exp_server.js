@@ -6,21 +6,38 @@ const mongoose = require("mongoose");
 const url = require("url");
 const { dbLocal, dbAtlas } = require("./mongo_data");
 
+const AdminBro = require("admin-bro");
+const AdminBroExpress = require("@admin-bro/express");
+const AdminBroMongoose = require("@admin-bro/mongoose");
+AdminBro.registerAdapter(AdminBroMongoose);
+
 const app = express();
 const baseDir = path.dirname(__dirname);
 const port = 3000;
 
 // DB connnection
-mongoose
-	.connect(dbAtlas, { useNewUrlParser: true, useUnifiedTopology: true })
-	.then((res) => {
-		// Rendering the page at localhost and link for the localhost
-		console.log("connected to the database");
-		app.listen(port);
-		console.log(`Rendering the page at http://localhost:${port}`);
-	})
-	.catch((err) => console.log(err));
+const rundb = async () => {
+	await mongoose
+		.connect(dbAtlas, { useNewUrlParser: true, useUnifiedTopology: true })
+		.then((res) => {
+			// Rendering the page at localhost and link for the localhost
+			console.log("connected to the database");
+		})
+		.catch((err) => console.log(err));
+};
+rundb();
+app.listen(port);
+console.log(`Rendering the page at http://localhost:${port}`);
+const AdminBroOptions = {
+	resources: [Appointment],
+	databases: [],
+	rootPath: "/admin",
+};
+const adminBro = new AdminBro(AdminBroOptions);
+const router = AdminBroExpress.buildRouter(adminBro);
 
+// middleware for admin pages
+app.use(adminBro.options.rootPath, router);
 // middleware for static files
 app.use(express.static(path.join(baseDir, "/client/static")));
 // comments on get and post requests that will appear in the console

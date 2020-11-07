@@ -4,7 +4,11 @@
 	"description": "A dental clinic site for booking appointments",
 	"main": "db_schema.js",
 	"dependencies": {
+		"@admin-bro/express": "^3.0.1",
+		"@admin-bro/mongoose": "^1.1.0",
+		"admin-bro": "^3.3.1",
 		"express": "^4.17.1",
+		"express-formidable": "^1.2.0",
 		"mongoose": "^5.10.7"
 	},
 	"devDependencies": {
@@ -13,7 +17,7 @@
 		"npm-run-all": "^4.1.5"
 	},
 	"scripts": {
-		"browser":"start firefox http://localhost:3000",
+		"browser": "start firefox http://localhost:3000",
 		"view": "nodemon exp_server.js",
 		"start": "npm-run-all -s browser view"
 	},

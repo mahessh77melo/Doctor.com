@@ -6,6 +6,7 @@ const mongoose = require("mongoose");
 const url = require("url");
 const { dbLocal, dbAtlas } = require("./mongo_data");
 
+// Admin bro third party plugin
 const AdminBro = require("admin-bro");
 const AdminBroExpress = require("@admin-bro/express");
 const AdminBroMongoose = require("@admin-bro/mongoose");
@@ -25,9 +26,13 @@ const rundb = async () => {
 		})
 		.catch((err) => console.log(err));
 };
+// calling the async function
 rundb();
+// listening to the port, starting the server
 app.listen(port);
 console.log(`Rendering the page at http://localhost:${port}`);
+
+// options object for admin page
 const AdminBroOptions = {
 	resources: [Appointment],
 	databases: [],
@@ -40,7 +45,7 @@ const router = AdminBroExpress.buildRouter(adminBro);
 app.use(adminBro.options.rootPath, router);
 // middleware for static files
 app.use(express.static(path.join(baseDir, "/client/static")));
-// comments on get and post requests that will appear in the console
+// middleware for comments on get and post requests in the console
 app.use(morgan("dev"));
 // form submission middleware code
 app.use(express.urlencoded({ extended: true }));
@@ -79,7 +84,7 @@ app.get("/getdata", (req, res) => {
 });
 
 // 404 page rendering
-// If none of the above is matched, this code is read by the compiler and thus the 404 page is served.
+// If none of the above is matched,  the 404 page is served.
 app.use((req, res) => {
 	res
 		.status(404)

@@ -12,6 +12,7 @@ const AdminBroExpress = require("@admin-bro/express");
 const AdminBroMongoose = require("@admin-bro/mongoose");
 AdminBro.registerAdapter(AdminBroMongoose);
 
+// app setup and variables
 const app = express();
 const baseDir = path.dirname(__dirname);
 const port = 3000;
@@ -26,8 +27,10 @@ const rundb = async () => {
 		})
 		.catch((err) => console.log(err));
 };
+
 // calling the async function
 rundb();
+
 // listening to the port, starting the server
 app.listen(port);
 console.log(`Rendering the page at http://localhost:${port}`);
@@ -43,10 +46,13 @@ const router = AdminBroExpress.buildRouter(adminBro);
 
 // middleware for admin pages
 app.use(adminBro.options.rootPath, router);
+
 // middleware for static files
 app.use(express.static(path.join(baseDir, "/client/static")));
+
 // middleware for comments on get and post requests in the console
 app.use(morgan("dev"));
+
 // form submission middleware code
 app.use(express.urlencoded({ extended: true }));
 

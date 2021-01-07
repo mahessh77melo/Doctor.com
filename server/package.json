@@ -18,7 +18,7 @@
 	},
 	"scripts": {
 		"browser": "start firefox http://localhost:3000",
-		"view": "nodemon exp_server.js",
+		"view": "nodemon server.js",
 		"start": "npm-run-all -s browser view"
 	},
 	"author": "Magesh J",

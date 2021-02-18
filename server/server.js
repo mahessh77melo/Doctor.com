@@ -77,8 +77,10 @@ app.post("/submit", (req, res) => {
 // Middleware for api request from frontend application query
 app.get("/getdata", (req, res) => {
 	let queryObject = url.parse(req.url, true).query;
+	// turning json to object and back to json
 	const query = JSON.parse(JSON.stringify(queryObject));
-	console.log(query.patient);
+	console.log(query);
+	// querying the database for a valid response
 	Appointment.findOne(query, (err, doc) => {
 		if (err) {
 			console.log(err);

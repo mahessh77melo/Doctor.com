@@ -62,13 +62,18 @@ const insertMarkup = () => {
 const showModal = () => {
 	document.querySelector("#modal-patient").value = "";
 	document.querySelector("#modal-applicant").value = "";
-	modalFormSection.classList.remove("hidden");
-	overlay.classList.remove("hidden");
+	[overlay, modalFormSection].forEach((el) => el.classList.remove("hidden"));
 };
 
 const hideModal = () => {
-	modalFormSection.classList.add("hidden");
-	overlay.classList.add("hidden");
+	modalFormSection.style.transition = "all 0.3s";
+	modalFormSection.style.transform = "translate(-50%, -50%) scale(0.05)";
+	modalFormSection.style.opacity = "0.05";
+	setTimeout(() => {
+		[overlay, modalFormSection].forEach((el) => el.classList.add("hidden"));
+		modalFormSection.style.transform = "translate(-50%, -50%) scale(1)";
+		modalFormSection.style.opacity = "1";
+	}, 300);
 };
 // Event Listeners
 viewBtn.addEventListener("click", showModal);
